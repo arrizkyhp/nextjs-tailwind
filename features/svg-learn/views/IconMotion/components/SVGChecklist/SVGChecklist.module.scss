@@ -1,0 +1,14 @@
+@import "../../styles/animation";
+
+.checkmark {
+  stroke-dasharray: 10px;
+
+  &.animate {
+    animation: checked 0.2s linear forwards;
+  }
+
+  &.uncheck {
+    stroke-dashoffset: 0;
+    animation: unchecked 0.2s linear forwards;
+  }
+}

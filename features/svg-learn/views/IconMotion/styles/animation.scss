@@ -54,3 +54,109 @@
     transform: translateY(0);
   }
 }
+
+@keyframes resizeMaskRect {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-1.5px, -1.5px);
+  }
+}
+
+@keyframes resizeMaskRectBack {
+  0% {
+    transform: translate(-1.5px, -1.5px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+
+  }
+}
+
+@keyframes moveCursor {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-3px, -3px);
+  }
+}
+
+@keyframes moveCursorBack {
+  0% {
+    transform: translate(-3px, -3px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveCircleY {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -1.5px);
+  }
+}
+
+@keyframes moveCircleYBack {
+  0% {
+    transform: translate(0, -1.5px);
+
+  }
+
+  100% {
+    transform: translate(0, 0);;
+  }
+}
+
+@keyframes moveCircleX {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-1.5px, 0);
+  }
+}
+
+@keyframes moveCircleXBack {
+  0% {
+    transform: translate(-1.5px, 0);
+
+  }
+
+  100% {
+    transform: translate(0, 0);;
+  }
+}
+
+@keyframes circleDown {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, 3px);
+  }
+}
+
+@keyframes circleDownBack {
+  0% {
+    transform: translate(0, 3px);
+
+  }
+
+  100% {
+    transform: translate(0, 0);;
+  }
+}
+
+

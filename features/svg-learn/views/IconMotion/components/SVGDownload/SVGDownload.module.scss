@@ -1,0 +1,14 @@
+@import "../../styles/animation";
+
+.arrow {
+  &.animate {
+    animation: arrowDown 0.1s forwards, arrowUp 0.1s forwards 0.1s;
+  }
+}
+
+.tray {
+  &.animate {
+    animation: trayDown 0.1s forwards 0.1s, trayUp 0.2s forwards 0.2s;
+  }
+}
+

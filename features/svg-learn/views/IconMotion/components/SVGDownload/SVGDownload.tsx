@@ -1,7 +1,7 @@
 import {useState} from "react";
 
-import styles from '../../IconMotion.module.scss';
-import {Button} from "@@/components/ui/button";
+import styles from './SVGDownload.module.scss';
+import {Button} from "@/components/ui/button";
 
 const SVGDownload = () => {
     const [animate, setAnimate] = useState<boolean>(false)

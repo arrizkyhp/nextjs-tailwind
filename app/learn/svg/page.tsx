@@ -1,6 +1,6 @@
 "use client";
 
-import IconMotion from "@@/features/svg-learn/views/IconMotion";
+import IconMotion from "@/features/svg-learn/views/IconMotion";
 
 const LearnSVG = () => {
     return (

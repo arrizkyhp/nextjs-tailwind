@@ -1,0 +1,43 @@
+@import "../../styles/animation";
+
+.cursor {
+  &.animate {
+    animation: moveCursor 0.2s forwards, moveCursorBack 0.3s forwards 0.2s;
+  }
+}
+
+.maskRect {
+  &.animate {
+    animation: resizeMaskRect .2s forwards, resizeMaskRectBack 0.3s forwards 0.2s;
+  }
+}
+
+.maskCircleX {
+  &.animate {
+    animation: moveCircleX .2s, moveCircleXBack 0.3s 0.2s;
+  }
+}
+
+.maskCircleY {
+  &.animate {
+    animation: moveCircleY .2s, moveCircleYBack 0.3s 0.2s;
+  }
+}
+
+.circleOne{
+  &.animate {
+    animation: circleDown .3s 0.3s, circleDownBack 0.3s 0.5s;
+  }
+}
+
+.circleTwo{
+  &.animate {
+    animation: circleDown .3s 0.6s, circleDownBack 0.3s 0.8s;
+  }
+}
+
+.circleThree{
+  &.animate {
+    animation: circleDown .3s 0.7s, circleDownBack 0.3s 1s;
+  }
+}

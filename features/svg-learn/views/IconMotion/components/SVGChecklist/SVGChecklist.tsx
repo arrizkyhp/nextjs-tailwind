@@ -1,7 +1,7 @@
 import {useState} from "react";
 
-import styles from '../../IconMotion.module.scss';
-import {Button} from "@@/components/ui/button";
+import styles from './SVGChecklist.module.scss';
+import {Button} from "@/components/ui/button";
 
 const SVGChecklist = () => {
     const [animateChecklist, setAnimateChecklist] = useState<boolean>(false)
