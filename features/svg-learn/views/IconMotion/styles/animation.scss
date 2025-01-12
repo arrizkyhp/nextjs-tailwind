@@ -228,4 +228,47 @@
   }
 }
 
+@keyframes bellCircleShake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  45% {
+    transform: rotate(8deg);
+  }
+
+  75% {
+    transform: rotate(-8deg);
+  }
+
+  85% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bellShake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  45% {
+    transform: rotate(15deg);
+  }
+
+  75% {
+    transform: rotate(-15deg);
+  }
+
+  85% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
 

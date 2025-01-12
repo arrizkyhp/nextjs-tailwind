@@ -1,0 +1,17 @@
+@import "../../styles/animation";
+
+.bellHead {
+  transform: rotate(0deg);
+  transform-origin: 16px 5px;
+
+  &.animate {
+    animation: bellShake 1s forwards
+  }
+}
+
+.bellCircle {
+  transform-origin: 16px 5px;
+  &.animate {
+    animation: bellCircleShake 1s forwards .2s;
+  }
+}
