@@ -1,0 +1,19 @@
+@import "../../styles/animation";
+
+.bellHat {
+  &.animate {
+    animation: bellHatDown .8s linear forwards;
+  }
+}
+
+.bellEffectLeft{
+  &.animate {
+    animation: bellEffectLeftMove .8s forwards .4s;
+  }
+}
+
+.bellEffectRight {
+  &.animate {
+    animation: bellEffectRightMove .8s forwards .4s;
+  }
+}
