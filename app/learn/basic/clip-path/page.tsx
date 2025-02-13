@@ -1,4 +1,4 @@
-import ClipPathView from "@@/features/clip-path/ClipPath/ClipPath";
+import ClipPathView from "@/features/clip-path/ClipPath/ClipPath";
 
 const ClipPathPage = () => {
 

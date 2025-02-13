@@ -1,6 +1,6 @@
 'use client';
 
-import TabMenuActive from "@@/features/tab-menu-active/TabMenuActive";
+import TabMenuActive from "@/features/tab-menu-active/TabMenuActive";
 
 const TabMenuActivePage = () => {
 
