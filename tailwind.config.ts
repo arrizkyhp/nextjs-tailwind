@@ -7,6 +7,7 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./features/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
   	extend: {
@@ -56,7 +57,22 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		boxShadow: {
+			"custom-shadow": "0px 4px 5.4px 0px rgba(100, 100, 100, 0.25)",
+		},
+		backgroundImage: {
+			"cutting-mat-blue": `
+          linear-gradient(90deg, #80808012 1px, transparent 0),
+          linear-gradient(180deg, #80808012 1px, transparent 0)
+        `,
+		},
+		backgroundSize: {
+			"cutting-mat-blue": "20px 20px", // Simple grid size
+		},
+		backgroundColor: {
+			"cutting-mat-blue": "#f4f4f4", // Base blue color for the cutting mat
+		},
   	}
   },
 	plugins: [animatePlugin],
