@@ -9,8 +9,8 @@ export const transactionsData: TransactionDataTypes[] = [
         "amount": "135.238",
         "detail": "Subscription",
         "pocket": "Main Pocket",
-        "category":
-            "Outgoing"
+        "iconUrl": "/icons/receipt.svg",
+        "category": "Outgoing"
     },
     {
         "id": "53954540272025",
@@ -20,6 +20,7 @@ export const transactionsData: TransactionDataTypes[] = [
         "amount": "350.000",
         "detail": "Transfer",
         "pocket": "Main Pocket",
+        "iconUrl": "/icons/handCoin.svg",
         "category": "Incoming"
     },
     {
@@ -30,6 +31,7 @@ export const transactionsData: TransactionDataTypes[] = [
         "amount": "1.100.000",
         "detail": "Online Course",
         "pocket": "Credit Card",
+        "iconUrl": "/icons/creditCard.svg",
         "category": "Outgoing"
     },
     {
@@ -40,6 +42,7 @@ export const transactionsData: TransactionDataTypes[] = [
         "amount": "90.000",
         "detail": "Digital Album",
         "pocket": "Main Pocket",
+        "iconUrl": "/icons/receipt.svg",
         "category": "Outgoing"
     }
 ]

@@ -1,9 +1,10 @@
 import {TransactionProps} from "@/features/labs/transactions/types/transactionProps";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const TransactionDetails = (props: TransactionProps) => {
     const { data } = props;
-    const { id, category, date, time, name, amount, pocket, detail} = data || {}
+    const { id, category, iconUrl, date, time, name, amount, pocket, detail} = data || {}
 
     return (
         <>
@@ -77,7 +78,7 @@ const TransactionDetails = (props: TransactionProps) => {
 
             <div className="flex items-start justify-between">
                 <div>
-                    <p className="text-[#656565]">From</p>
+                    <p className="text-[#656565]">{category === "Incoming" ? "To" : "From"}</p>
                     <motion.p
                         className="text-xl"
                         initial={{opacity: 0, y: 20}}
@@ -93,7 +94,14 @@ const TransactionDetails = (props: TransactionProps) => {
                     layoutId={`graphic-${id}`}
                     layout="position"
                     className="flex items-center justify-center h-[111px] w-[111px] bg-[#D9D9D9] rounded-lg">
-                    Icon
+                    <Image
+                        className="dark:invert"
+                        src={iconUrl || ''}
+                        alt="Next.js logo"
+                        width={37}
+                        height={37}
+                        priority
+                    />
                 </motion.div>
                 </div>
             </div>

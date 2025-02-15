@@ -1,6 +1,7 @@
 import {transactionsData} from "@/features/labs/transactions/constants/transactionsData";
 import {TransactionProps} from "@/features/labs/transactions/types/transactionProps";
 import { motion} from "motion/react";
+import Image from "next/image";
 
 const TransactionsList = (props: TransactionProps) => {
     const { setSelectedTransaction } = props;
@@ -27,7 +28,14 @@ const TransactionsList = (props: TransactionProps) => {
                                     layoutId={`graphic-${transaction.id}`}
                                     layout="position"
                                     className="flex items-center justify-center h-[85px] w-[85px] bg-[#D9D9D9] rounded-full">
-                                    Icon
+                                    <Image
+                                        className="dark:invert"
+                                        src={transaction.iconUrl}
+                                        alt="Next.js logo"
+                                        width={37}
+                                        height={37}
+                                        priority
+                                    />
                                 </motion.div>
                             </div>
                             <div className="flex justify-between w-full">
