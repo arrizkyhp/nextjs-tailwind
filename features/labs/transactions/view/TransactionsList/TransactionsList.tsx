@@ -29,7 +29,7 @@ const TransactionsList = (props: TransactionProps) => {
                                     layout="position"
                                     className="flex items-center justify-center h-[41px] w-[41px] md:h-[85px] md:w-[85px] bg-[#D9D9D9] rounded-full">
                                     <Image
-                                        className="dark:invert w-[21px] h-[21px]"
+                                        className="dark:invert w-[21px] h-[21px] md:w-[37px] md:h-[37px]"
                                         src={transaction.iconUrl}
                                         alt="Next.js logo"
                                         width={37}
