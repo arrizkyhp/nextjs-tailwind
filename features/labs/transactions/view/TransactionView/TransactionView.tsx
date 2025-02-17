@@ -18,7 +18,7 @@ const TransactionView = () => {
         <AnimatePresence mode="popLayout" initial={false}>
             <MotionConfig transition={{ duration: 0.5, type: "spring", bounce: 0 }}>
             <div className="flex items-center justify-center h-full">
-              <motion.div animate={{  height: selectedTransaction?.id ? 538 : 628}}  className="bg-white px-6 py-9 rounded-lg shadow-custom-shadow w-[600px]">
+              <motion.div animate={{  height: selectedTransaction?.id ? 538 : 628}}  className="bg-white px-4 mx-4 md:mx-0 md:px-6 py-9 rounded-lg shadow-custom-shadow w-[450px] md:w-[600px]">
                       <div className="flex items-center justify-between pb-8">
                           <AnimatePresence mode="wait" initial={false}>
                           {selectedTransaction.id ? (

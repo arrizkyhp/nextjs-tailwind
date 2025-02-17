@@ -21,15 +21,15 @@ const TransactionsList = (props: TransactionProps) => {
                     >
                         <button
                             onClick={() => setSelectedTransaction(transaction)}
-                            className="flex rounded-lg py-2.5 px-4 bg-[#ECECEC] hover:bg-[#E4E4E4] shadow-[inset_0px_2px_4px_0px_rgba(0,0,0,0.25)] gap-5 items-center cursor-pointer"
+                            className="flex rounded-lg md:py-2.5 py-4 px-2 md:px-4 bg-[#ECECEC] hover:bg-[#E4E4E4] shadow-[inset_0px_2px_4px_0px_rgba(0,0,0,0.25)] gap-3 md:gap-5 items-center cursor-pointer"
                         >
                             <div className="w-fit">
                                 <motion.div
                                     layoutId={`graphic-${transaction.id}`}
                                     layout="position"
-                                    className="flex items-center justify-center h-[85px] w-[85px] bg-[#D9D9D9] rounded-full">
+                                    className="flex items-center justify-center h-[41px] w-[41px] md:h-[85px] md:w-[85px] bg-[#D9D9D9] rounded-full">
                                     <Image
-                                        className="dark:invert"
+                                        className="dark:invert w-[21px] h-[21px]"
                                         src={transaction.iconUrl}
                                         alt="Next.js logo"
                                         width={37}
@@ -42,14 +42,14 @@ const TransactionsList = (props: TransactionProps) => {
                                 <div className="text-left">
                                     <motion.h2
                                         layoutId={`name-${transaction.id}`}
-                                        className="text-xl font-bold line-clamp-1 w-[250px]"
+                                        className="text-base md:text-xl font-bold line-clamp-1 w-[130px] md:w-[250px]"
                                     >
                                         {transaction.name}
                                     </motion.h2>
                                     <motion.p
                                         layoutId={`date-${transaction.id}`}
                                         layout="position"
-                                        className="text-[#656565]"
+                                        className="text-sm md:text-base text-[#656565]"
                                     >
                                         <motion.span>
                                             {transaction.date}
@@ -60,14 +60,14 @@ const TransactionsList = (props: TransactionProps) => {
                                     <motion.h2
                                         layoutId={`amount-${transaction.id}`}
                                         layout="position"
-                                        className={`text-xl font-bold ${transaction.category === "Incoming" ? 'text-[#1B862F]' : 'text-black'}`}
+                                        className={`text-base md:text-xl font-bold ${transaction.category === "Incoming" ? 'text-[#1B862F]' : 'text-black'}`}
                                     >
                                         {`${transaction.category === "Incoming" ? "" : "-"}Rp${transaction.amount}`}
                                     </motion.h2>
                                     <motion.p
                                         layoutId={`category-${transaction.id}`}
                                         layout="position"
-                                        className="text-[#656565]"
+                                        className="text-sm md:text-base text-[#656565]"
                                     >
                                         {transaction.category}
                                     </motion.p>
