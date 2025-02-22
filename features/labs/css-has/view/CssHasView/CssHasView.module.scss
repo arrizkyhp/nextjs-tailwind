@@ -1,0 +1,47 @@
+// CssHasView.module.scss
+
+.shelf {
+  display: flex;
+  flex-direction: column; // For Stacking behaviour
+  height: 250px;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.3s ease;
+  width: 700px;
+  border-bottom: 12px solid black;
+
+  // When there are 5 or more books change direction
+  &:has(.book:nth-child(n + 5)) {
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse; // Changed to wrap-reverse
+    align-content: flex-start; // Added to maintain alignment
+
+    .book {
+      width: 60px;
+      height: 200px;
+      overflow: hidden;
+
+      // Create 3-column layout with proper spacing
+      &:nth-child(3n + 1) {
+        margin-right: 1.5rem;
+      }
+
+      p {
+        transform: rotate(90deg);
+        width: auto;
+        white-space: nowrap;
+        text-align: center;
+      }
+
+    }
+  }
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 50px;
+}
