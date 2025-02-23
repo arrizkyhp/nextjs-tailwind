@@ -1,67 +1,27 @@
 'use client';
 
-import { useState } from "react";
 import styles from './CssHasView.module.scss';
 
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
+import useCssHasView from "@/features/labs/css-has/view/CssHasView/CssHasView.hooks";
 
-interface Book {
-    id: string;
-    title: string;
-}
+
 
 const CssHasView = () => {
-    const [books, setBooks] = useState<Book[]>([]);
-
-    const bookTitles = [
-        "Harry Potter",
-        "Filosofi Teras",
-        "The Little Prince",
-        "Law of UX",
-        "Atomic Habits",
-        "Make it stick",
-        "Steal Like an Artist",
-        "Game of Throne",
-        "Debugging CSS",
-        "Dark Places",
-        "Sharp Object",
-    ];
-
-    const getRandomUniqueTitle = () => {
-        const existingTitles = new Set(books.map(book => book.title));
-        const availableTitles = bookTitles.filter(title => !existingTitles.has(title));
-
-        if (availableTitles.length === 0) {
-            return null;
-        }
-
-        return availableTitles[Math.floor(Math.random() * availableTitles.length)];
-    };
-
-    const addBook = () => {
-        if (books.length >= 9) {
-            return setBooks(books);
-        }
-
-        const newTitle = getRandomUniqueTitle();
-        if (!newTitle) {
-            return; // Don't add a book if no unique titles are available
-        }
-
-        const newBook = {
-            id: `book-${Date.now()}`,
-            title: newTitle
-        };
-        setBooks([newBook, ...books]);
-    };
-
-    const removeBook = () => {
-        setBooks(books.slice(1));
-    };
+    const {
+        addBook,
+        books,
+        removeBook,
+     } = useCssHasView();
 
     // :TODO Add random different size
     // :TODO add random books rotation so its italic like
+
+    // If book has more than 4, display change from column to row reverse
+    // add spacing where book are 3 and display row reverse
+    // add has() css if book children has .bestSeller div
+
 
     return (
         <div className="flex flex-col  items-center gap-4">
@@ -99,10 +59,12 @@ const CssHasView = () => {
                             layout
                             layoutId={book.id}
                             key={book.id}
-                            initial={{opacity: 0, y: -20}}
-                            animate={{opacity: 1, y: 0}}
-                            exit={{opacity: 0, y: -20}}
-                            className={`${styles.book} bg-gray-200 rounded p-2`}>
+                            initial={{opacity: 0, y: -20, filter: "blur(2px)"}}
+                            animate={{opacity: 1, y: 0, filter: "blur(0)"}}
+                            exit={{opacity: 0, y: -20, filter: "blur(2px)"}}
+                            className={`${styles.book} bg-gray-200 rounded p-2`}
+                        >
+                            {book.isBestSeller && <div className={styles.bestSeller} />}
                             <p>{book.title}</p>
                         </motion.div>
                     ))}

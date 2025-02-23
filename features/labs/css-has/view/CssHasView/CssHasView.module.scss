@@ -1,5 +1,3 @@
-// CssHasView.module.scss
-
 .shelf {
   display: flex;
   flex-direction: column; // For Stacking behaviour
@@ -13,9 +11,10 @@
 
   // When there are 5 or more books change direction
   &:has(.book:nth-child(n + 5)) {
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse; // Changed to wrap-reverse
-    align-content: flex-start; // Added to maintain alignment
+    flex-direction: row-reverse;  // For horizontal behaviour
+    flex-wrap: wrap-reverse;
+    align-content: flex-start;
+    padding-left: 8px;
 
     .book {
       width: 60px;
@@ -36,12 +35,39 @@
 
     }
   }
+
+  .book {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 50px;
+
+    p {
+      z-index: 2;
+    }
+
+    &:after {
+      opacity: .5;
+    }
+
+    // if Books has children bestSeller add Star
+    &:has(> .bestSeller) {
+      &:after {
+        position: absolute;
+        z-index: 1;
+
+        // Star Shape
+        content: '';
+        width: 40px;
+        height: 40px;
+        clip-path: polygon(100% 50%,78.53% 59.27%,90.45% 79.39%,67.63% 74.27%,65.45% 97.55%,50% 80%,34.55% 97.55%,32.37% 74.27%,9.55% 79.39%,21.47% 59.27%,0% 50%,21.47% 40.73%,9.55% 20.61%,32.37% 25.73%,34.55% 2.45%,50% 20%,65.45% 2.45%,67.63% 25.73%,90.45% 20.61%,78.53% 40.73%);
+        background: goldenrod;
+      }
+    }
+
+  }
+
 }
 
-.book {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 220px;
-  height: 50px;
-}

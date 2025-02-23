@@ -13,7 +13,6 @@ const TransactionView = () => {
         setSelectedTransaction(DEFAULT_TRANSACTION_DATA);
     };
 
-
     return (
         <AnimatePresence mode="popLayout" initial={false}>
             <MotionConfig transition={{ duration: 0.5, type: "spring", bounce: 0 }}>
